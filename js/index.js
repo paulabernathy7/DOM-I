@@ -40,3 +40,72 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let codeSnippet = document.getElementById("cta-img");
+codeSnippet.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImg = document.getElementById("middle-img" );
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+ let nav = document.querySelectorAll('a')
+ console.log(nav)
+ 
+ nav[0].textContent = siteContent["nav"] ["nav-item-1"]
+ nav[1].textContent = siteContent["nav"] ["nav-item-2"]
+ nav[2].textContent = siteContent["nav"] ["nav-item-3"]
+ nav[3].textContent = siteContent["nav"] ["nav-item-4"]
+ nav[4].textContent = siteContent["nav"] ["nav-item-5"]
+
+
+ const cta = document.querySelector(".cta-text h1");
+ cta.textContent = siteContent ["cta"] ["h1"]
+
+ const ctaButton = document.querySelector(".cta-text button");
+ ctaButton.textContent = siteContent ["cta"] ["button"]
+ 
+const topContent = document.querySelectorAll('.top-content .text-content h4');
+topContent[0].textContent = siteContent['main-content']['features-h4'];
+topContent[1].textContent = siteContent['main-content']['about-h4'];
+
+const topContent2 = document.querySelectorAll('.top-content .text-content p');
+topContent2[0].textContent = siteContent ['main-content'] ["features-content"]
+topContent2[1].textContent = siteContent ['main-content'] ["about-content"]
+
+ const bottomContent = document.querySelectorAll('.bottom-content .text-content h4');
+ bottomContent[0].textContent = siteContent['main-content'] ["services-h4"];
+ bottomContent[1].textContent = siteContent ['main-content'] ["product-h4"]
+ bottomContent[2].textContent = siteContent ['main-content'] ["vision-h4"]
+
+const bottomContent2 = document.querySelectorAll('.bottom-content .text-content p'); 
+bottomContent2[0].textContent = siteContent ['main-content'] ["services-content"]
+bottomContent2[1].textContent = siteContent ['main-content'] ["product-content"]
+bottomContent2[2].textContent = siteContent ['main-content'] ["vision-content"]
+
+const contact = document.querySelectorAll('.contact h4 ');
+contact[0].textContent = siteContent ['contact'] ["contact-h4"]
+
+const contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = siteContent ['contact'] ["address" ]
+contactP[1].textContent = siteContent ['contact'] ["phone" ]
+contactP[2].textContent = siteContent ['contact'] ["email" ]
+
+const foot = document.querySelector('footer p');
+foot.textContent = siteContent ['footer']  ["copyright"]
+
+const newNav = document.querySelector('nav');
+let newItem = document.createElement('a');
+newItem.textContent = 'Other';
+newNav.appendChild(newItem)
+
+
+let newItem2 = document.createElement('a');
+newItem2.textContent = 'Subscribe';
+newNav.prepend(newItem2)
+
+
+const navColor = document.querySelectorAll('a')
+navColor.forEach(function (element) {
+  element.style.color = "green"
+})
+console.log(navColor)
+
