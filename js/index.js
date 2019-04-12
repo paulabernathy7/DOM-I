@@ -56,6 +56,7 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
  nav[3].textContent = siteContent["nav"] ["nav-item-4"]
  nav[4].textContent = siteContent["nav"] ["nav-item-5"]
 
+
  const cta = document.querySelector(".cta-text h1");
  cta.textContent = siteContent ["cta"] ["h1"]
 
@@ -90,4 +91,21 @@ contactP[2].textContent = siteContent ['contact'] ["email" ]
 
 const foot = document.querySelector('footer p');
 foot.textContent = siteContent ['footer']  ["copyright"]
+
+const newNav = document.querySelector('nav');
+let newItem = document.createElement('a');
+newItem.textContent = 'Other';
+newNav.appendChild(newItem)
+
+
+let newItem2 = document.createElement('a');
+newItem2.textContent = 'Subscribe';
+newNav.prepend(newItem2)
+
+
+const navColor = document.querySelectorAll('a')
+navColor.forEach(function (element) {
+  element.style.color = "green"
+})
+console.log(navColor)
 
